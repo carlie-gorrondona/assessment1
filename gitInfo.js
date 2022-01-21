@@ -9,7 +9,7 @@
     It should be a string containing your best definition of what Git is.
 */
 
-//CODE HERE
+const gitDefinition = "git allows users to track changes to code and manage a project";
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -17,7 +17,7 @@
     It should be a string containing your best definition of what GitHub is.
 */
 
-//CODE HERE
+const gitHubDefinition = "Online platform where you can push code from your local device to the GitHub website. Allows multiple users to work on code from any location which helps with collaboration.";
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -25,7 +25,7 @@
     It should be a string containing your best definition of what 'git init' does.
 */
 
-//CODE HERE
+const gitInitDefinition = "Initialize a local repository in the current folder.";
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -33,7 +33,7 @@
     It should be a string containing your best definition of what 'git clone' does.
 */
 
-//CODE HERE
+const gitCloneDefinition = "copy a repository from GitHub and put it on your device.";
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -41,7 +41,7 @@
     It should be a string containing your best definition of what 'git status' does.
 */
 
-//CODE HERE
+const gitStatusDefinition = "tells the user about their repository such as location of branch, if changes have been staged for a commit, and which files in the repository have been modified.";
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -52,7 +52,9 @@
     It should be a string containing the code to add all files.
 */
 
-//CODE HERE
+const gitAddDefinition = "adds files to be tracked inside of a specific repo";
+
+const gitAddCode = "git add .";
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -63,7 +65,9 @@
     It should be a string containing the code to commit using the message "initial commit".
 */
 
-//CODE HERE
+const gitCommitDefinition = "creates a snapshot of the files being tracked";
+
+const gitCommitCode = "git commit -m 'initial commit'";
 
 
 //////////////////PROBLEM 8////////////////////
@@ -72,4 +76,4 @@
     It should be a string containing your best definition of what 'git push' does.
 */
 
-//CODE HERE
+const gitPushDefinition = "pushes a user's local commits to GitHub";
