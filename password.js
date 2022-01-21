@@ -11,38 +11,63 @@ console.log("Hello! Welcome to Password Validator.");
 
 reader.question("Please enter a password to validate: ", function(input){
     
+    //booleans for uppercase letters, lowercase letters, and numbers
     let upperCase = false;
     let lowerCase = false;
     let number = false;
 
     if (input.length >= 10) {
 
+        //loops checks each element to determine if the string contains an upper case letter; used .charCodeAt() to determine ASCII value of each element
         for (let i = 0; i < input.length; i++) {
 
-            if (input[i] === input.toUpperCase()) {
+            if (input.charCodeAt(i) >= 65 && input.charCodeAt(i) <= 90) {
 
                 upperCase = true;
+                break;
 
-            } 
+            }  else {
 
-            if (input[i] === input.toLowerCase()) {
-
-                lowerCase = true;
-
-            } 
-
-            if (input[i] === input.NaN) {
-
-                number = false;
-                
-            } else {
-
-                number = true;
-
+                continue;
             }
 
         }
 
+        //loops checks each element to determine if the string contains a lower case letter; used .charCodeAt() to determine ASCII value of each element
+        for (let i = 0; i < input.length; i++) {
+
+            if (input.charCodeAt(i) >= 97 && input.charCodeAt(i) <= 122) {
+
+                lowerCase = true;
+                break;
+            
+            } else {
+
+                continue;
+            }
+
+        }
+
+        //loop checks each element to determine if the string contains a number
+        for (let i = 0; i < input.length; i++) {
+
+            if (input[i] === input.NaN) {
+
+                continue;
+                
+            } else {
+            
+                number = true;
+                break;
+            
+            }
+
+        }
+
+        //console log checks to make sure booleans are all true
+        //console.log(upperCase, lowerCase, number);
+
+        //if statement checks to make sure all booleans are true in order to validate password
         if (upperCase && lowerCase && number) {
 
             console.log("Success! Your password has been validated!");
@@ -65,8 +90,4 @@ reader.question("Please enter a password to validate: ", function(input){
 });
 
 
-// 1 capital letter 
-//     checks each char in input 
-//     must check entire input before determining
-// 1 lower case 
-// 1 number
+
